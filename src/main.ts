@@ -49,8 +49,8 @@ let numbers: number[] = [
 const element = Math.min(...numbers)
 console.log(element)
 
-// for (let index = 0; index < numbers.length; index++) {
-//   const element = numbers[index]
-// }
-// const smallest = element.smallest()
-// console.log(`${smallest}`)
+for (let index = 0; index < numbers.length; index++) {
+  const element = numbers[index]
+}
+const smallest = element.smallest()
+console.log(`${smallest}`)
