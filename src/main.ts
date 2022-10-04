@@ -1,37 +1,38 @@
+import { CLIENT_RENEG_WINDOW } from 'tls'
 import './style.css'
-const numberOfCupsOfCoffee = 2
+//const numberOfCupsOfCoffee = 2
 
-const aboutMe = {
-  fullName: 'Jonathon Kieran Childs',
-  luckyNumber: 4,
-  favoriteMovies: ['1942', ' Enders Game', ' Jumanji', ' Godzilla'],
-}
+// const aboutMe = {
+//   fullName: 'Jonathon Kieran Childs',
+//   luckyNumber: 4,
+//   favoriteMovies: ['1942', ' Enders Game', ' Jumanji', ' Godzilla'],
+// }
 
-console.log(`${aboutMe.favoriteMovies[1]}`)
+// console.log(`${aboutMe.favoriteMovies[1]}`)
 
-const userName = window.prompt('What is your name?', 'Bob')
+// const userName = window.prompt('What is your name?', 'Bob')
 
-console.log(`Hello, ${userName}`)
+// console.log(`Hello, ${userName}`)
 
-const firstOperand = Number(window.prompt('Please enter a number:'))
+// const firstOperand = Number(window.prompt('Please enter a number:'))
 
-const secondOperand = Number(window.prompt('Please enter another number:'))
+// const secondOperand = Number(window.prompt('Please enter another number:'))
 
-const sum = firstOperand + secondOperand
+// const sum = firstOperand + secondOperand
 
-const difference = secondOperand - firstOperand
+// const difference = secondOperand - firstOperand
 
-const product = firstOperand * secondOperand
+// const product = firstOperand * secondOperand
 
-const quotient = firstOperand / secondOperand
+// const quotient = firstOperand / secondOperand
 
-const remainder = firstOperand % secondOperand
+// const remainder = firstOperand % secondOperand
 
-console.log(`${sum}`)
-console.log(`${difference}`)
-console.log(`${product}`)
-console.log(`${quotient}`)
-console.log(`${remainder}`)
+// console.log(`${sum}`)
+// console.log(`${difference}`)
+// console.log(`${product}`)
+// console.log(`${quotient}`)
+// console.log(`${remainder}`)
 
 let numbers: number[] = [
   17760, 20780, 16243, 42205, 30561, 26136, 20071, 12501, 49650, 43681, 21080,
@@ -46,11 +47,18 @@ let numbers: number[] = [
   31069,
 ]
 
-const element = Math.min(...numbers)
-console.log(element)
+const smallestElement = Math.min(...numbers)
+console.log(smallestElement)
 
+const largestElement = Math.max(...numbers)
+console.log(largestElement)
+
+let smallest = numbers[0]
+let largest = numbers[0]
 for (let index = 0; index < numbers.length; index++) {
   const element = numbers[index]
+  if (element < smallest) smallest = element
+  if (element > largest) largest = element
 }
-const smallest = element.smallest()
-console.log(`${smallest}`)
+console.log(smallest)
+console.log(largest)
