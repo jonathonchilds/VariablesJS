@@ -55,10 +55,26 @@ console.log(largestElement)
 
 let smallest = numbers[0]
 let largest = numbers[0]
+let arraySum = 0
+let average = 0
+
 for (let index = 0; index < numbers.length; index++) {
   const element = numbers[index]
   if (element < smallest) smallest = element
   if (element > largest) largest = element
+  arraySum += numbers[index]
 }
+
+average = arraySum / (numbers.length + 1)
+
 console.log(smallest)
 console.log(largest)
+console.log(arraySum)
+console.log(average)
+
+const stats = {
+  smallest: smallest,
+  largest: largest,
+  sum: arraySum,
+  average: average,
+}
